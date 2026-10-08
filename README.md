@@ -28,13 +28,13 @@ install.packages(c("dplyr", "tibble", "ggplot2", "jsonlite", "digest"))
 New-Item -ItemType Directory -Force runtime/R-library
 git clone https://github.com/PaulingLiu/ROGUE.git runtime/ROGUE
 git -C runtime/ROGUE checkout 6e1c8f9ee419c8c323ce9816841f78545dc17bf9
-R CMD INSTALL -l runtime/R-library runtime/ROGUE
+R.exe CMD INSTALL -l runtime/R-library runtime/ROGUE
 $env:ROGUE_R_LIB = (Resolve-Path runtime/R-library).Path
 Rscript Code/download_example.R
 Rscript Code/run_rogue.R Data/DC.rds.gz Data/info.rds.gz Results/new_run UMI
 ```
 
-需要 `R`、`Rscript` 和 `git` 在 PATH；否则使用自己安装程序的完整路径。下载器遇到已有输入会停止，**不会覆盖原始数据**。上述新运行写表到 `Results/new_run/`，图写到 `Results/Figures/`；已提交的示例图在根目录 `Figures/`，因此不会被这条示例命令覆盖。若下载过数据，跳过下载步骤并核对校验和。
+上述为 Windows PowerShell 命令，需要 `R.exe`、`Rscript` 和 `git` 在 PATH；否则使用自己安装程序的完整路径。明确写 `R.exe`，避免 PowerShell 的 `r` 历史命令别名。下载器遇到已有输入会停止，**不会覆盖原始数据**。上述新运行写表到 `Results/new_run/`，图写到 `Results/Figures/`；已提交的示例图在根目录 `Figures/`，因此不会被这条示例命令覆盖。若下载过数据，跳过下载步骤并核对校验和。
 
 ## 换自己的数据 / Your data
 
