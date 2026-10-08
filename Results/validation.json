@@ -1,0 +1,22 @@
+{
+  "cells": 913,
+  "genes": 9795,
+  "sample_column": "Patient",
+  "label_column": "ct",
+  "platform": "UMI",
+  "span": 0.6,
+  "min_cell_n": 10,
+  "remove_outlier_n": 2,
+  "excluded_input_cells": 0,
+  "excluded_input_genes": 0,
+  "groups": 26,
+  "pass": 22,
+  "insufficient": 4,
+  "failed": 0,
+  "fit_warnings": 189,
+  "groups_with_warnings": 13,
+  "elapsed_seconds": 11.78,
+  "R": "R version 4.3.1 (2023-06-16 ucrt)",
+  "ROGUE": "1.0",
+  "validation_scope": "Official real-data example only; not a clustering decision or biological certification"
+}

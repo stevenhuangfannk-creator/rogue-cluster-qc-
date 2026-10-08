@@ -1,0 +1,2 @@
+# Preserve generated receipts; trailing alignment spaces are not code defects.
+Results/sessionInfo.txt whitespace=-blank-at-eol
